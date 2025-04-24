@@ -1,0 +1,227 @@
+/* --- product_detail.css - Styles for Product Detail Pages --- */
+
+/* --- Variables --- */
+:root {
+    --header-height: 75px;
+    --primary-color: #3498db;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+  }
+  
+  /* --- Layout --- */
+  
+  .product-detail-page {
+    padding: 25px 0;
+  }
+  
+  .product-detail-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-items: flex-start;
+  }
+  
+  /* --- Image Gallery --- */
+  
+  .product-image-gallery {
+    flex-basis: 50%;
+    position: sticky;
+    top: calc(var(--header-height) + 25px);
+  }
+  
+  .gallery-main-view {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  #gallery-main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    overflow-x: auto;
+  }
+  
+  .thumbnail {
+    /* Simplified selector */
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .thumbnail:hover {
+    opacity: 1;
+  }
+  
+  .thumbnail.active {
+    opacity: 1;
+    border-color: var(--primary-color);
+  }
+  
+  .gallery-nav-btn {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.4em;
+    line-height: 33px;
+    text-align: center;
+    cursor: pointer;
+    color: #555;
+    padding: 0;
+  }
+  
+  .gallery-nav-btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* --- Product Info --- */
+  
+  .product-info-details {
+    flex-basis: 50%;
+  }
+  
+  .product-info-details h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+  }
+  
+  .large-description {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+  }
+  
+  /* --- Form Elements --- */
+  
+  .product-info-details .size-options {
+    margin-bottom: 30px;
+  }
+  
+  .product-info-details .quantity-picker {
+    margin-bottom: 30px;
+  }
+  
+  .product-info-details .product-price-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .product-info-details .add-to-cart-btn {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+  
+  .flavor-selector {
+    margin-bottom: 30px;
+  }
+  
+  .flavor-selector label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+  
+  .flavor-selector select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #fff;
+    font-family: inherit;
+  }
+  
+  .size-options {
+    margin-top: 30px;
+  }
+  
+  /* --- Form Messages --- */
+  
+  .form-message {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.2em;
+  }
+  
+  .form-message.success {
+    color: #28a745;
+  }
+  
+  .form-message.error {
+    color: #dc3545;
+  }
+  
+  /* --- Footer --- */
+  
+  .main-footer {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .main-footer .quote {
+    margin: 0;
+    font-size: 0.8em;
+    opacity: 0.5;
+    font-style: italic;
+  }
+  
+  /* --- Responsive --- */
+  
+  @media (max-width: 768px) {
+    .product-detail-container {
+      flex-direction: column;
+    }
+  
+    .product-image-gallery {
+      flex-basis: auto;
+      width: 100%;
+      position: static;
+      margin-bottom: 30px;
+    }
+  
+    .product-info-details {
+      flex-basis: auto;
+      width: 100%;
+    }
+  
+    .product-info-details h1 {
+      font-size: 1.8em;
+    }
+  }

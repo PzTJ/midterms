@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasoning Sampler - Product Details</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/catalogue.css">
+    <link rel="stylesheet" href="./styles/product_detail.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+          <div class="nav-left">
+            <a href="index.html" class="nav-logo" aria-label="Homepage">
+              <img src="images/logo.svg" alt="Site Logo">
+            </a>
+          </div>
+
+          <div class="nav-center">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="catalogue.html">Products</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="career.html">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-right">
+            <a href="login.html" class="nav-icon" aria-label="Login">
+              <img src="images/user.png" alt="Login Icon">
+            </a>
+            <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+              <img src="images/cart.png" alt="Cart Icon">
+            </a>
+          </div>
+        </nav>
+    </header>
+
+    <main class="product-detail-page">
+        <div class="product-detail-container">
+
+            <section class="product-image-gallery">
+                <div class="gallery-main-view">
+                     <img id="gallery-main-image" src="images/product_diy2.jpg" alt="Seasoning Sampler"> </div>
+                <div class="gallery-controls">
+                    <button id="gallery-prev" class="gallery-nav-btn" aria-label="Previous Image">&lt;</button>
+                    <div class="gallery-thumbnails" id="gallery-thumbnails">
+                        <img src="images/product_diy2.jpg" alt="Thumbnail 1" class="thumbnail active" data-index="0">
+                        <img src="images/pC1.jpg" alt="Thumbnail 2" class="thumbnail" data-index="1">
+                        <img src="images/pC2.jpg" alt="Thumbnail 3" class="thumbnail" data-index="2">
+                        <img src="images/pC3.jpg" alt="Thumbnail 4" class="thumbnail" data-index="3">
+                        <img src="images/pC4.jpg" alt="Thumbnail 5" class="thumbnail" data-index="4">
+                    </div>
+                    <button id="gallery-next" class="gallery-nav-btn" aria-label="Next Image">&gt;</button>
+                </div>
+            </section>
+
+            <section class="product-info-details">
+                <h1 id="product-name">Seasoning Sampler</h1>
+
+                <p id="product-description" class="large-description">
+                    Unleash a world of flavor possibilities onto your homemade popcorn! Our Seasoning Sampler kit is your passport to discovering your ultimate popcorn topping. Tired of plain butter and salt? This curated variety pack lets you experiment with a range of delicious, perfectly blended seasonings designed to complement freshly popped kernels.<br><br>Our 4 flavors featured on our website, too, was made from this very material! By buying thís pack, you may even discover your own favorite flavor, as this sampler has something for every palate. It's the perfect companion to our Popcorn Kernel Kit, allowing you to customize batch after batch. Find your favorite, mix and match, and elevate your DIY popcorn game from simple snack to gourmet treat!
+                </p>
+
+                <form id="product-options-form">
+
+                    <div class="quantity-picker">
+                        <label for="product-quantity">Quantity:</label>
+                        <button type="button" class="quantity-btn minus" id="product-qty-minus">-</button>
+                        <input type="number" id="product-quantity" name="quantity" value="1" min="1" step="1">
+                        <button type="button" class="quantity-btn plus" id="product-qty-plus">+</button>
+                    </div>
+
+                    <div class="product-price-display">
+                         Price: <span id="product-current-price">$0.00</span>
+                    </div>
+
+                    <button type="submit" class="button add-to-cart-btn">Add to Cart</button>
+                    <p id="add-to-cart-message" class="form-message"></p> </form>
+            </section>
+
+        </div> </main>
+
+        <footer class="main-footer">
+            <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
+        </footer>
+
+    <script src="./scripts/product_C.js"></script> </body>
+</html>
