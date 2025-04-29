@@ -155,11 +155,11 @@
     font-style: italic;
   }
 
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
     .careers-container h1 { font-size: 1.8em; }
     .careers-intro { font-size: 1em; margin-bottom: 30px; }
     .job-listings {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
     .job-listing {
